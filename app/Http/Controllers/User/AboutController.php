@@ -12,7 +12,12 @@ class AboutController extends Controller
      */
     public function index()
     {
-        //
+        $data =[
+            'title' => 'About Us',
+            'breadcrumbs' => array('home'=> 'Home','about'=> 'About Us'),
+            'active' => 'about',
+        ];
+        return view('user.about.index',$data);
     }
 
     /**
