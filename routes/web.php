@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Admin\AdminDashboardController;
 use App\Http\Controllers\User\AboutController;
 use App\Http\Controllers\User\ContactUsController;
 use App\Http\Controllers\User\CourseController;
@@ -19,3 +20,10 @@ Route::get('contact-us',[ContactUsController::class,'index'])->name('contact.us'
 Route::get('courses',[CourseController::class,'index'])->name('courses');
 Route::get('instructors',[InstructorController::class,'index'])->name('instructors');
 Route::get('donate',[DonationController::class,'index'])->name('donate');
+
+
+
+
+Route::middleware('admin')->group(function(){
+    Route::get('admin/dashboard', [AdminDashboardController::class, 'index']);
+});
