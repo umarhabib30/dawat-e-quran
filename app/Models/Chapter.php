@@ -4,9 +4,9 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Course extends Model
+class Chapter extends Model
 {
     protected $fillable=[
-        'title','description','image','auther','category_id'
+        'name','course_id',
     ];
 }
