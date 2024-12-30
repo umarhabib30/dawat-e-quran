@@ -12,7 +12,12 @@ class AdminDashboardController extends Controller
      */
     public function index()
     {
-        return view('admin.dashboard.index');
+        $data = [
+            'active' => 'dashboard',
+            'title' => 'Admin Dashboard',
+        ];
+
+        return view('admin.dashboard.index', $data);
     }
 
     /**

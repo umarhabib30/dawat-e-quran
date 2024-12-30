@@ -8,29 +8,27 @@ use Illuminate\Notifications\Notifiable;
 
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Facades\Hash;
 
 class Admin extends Authenticatable
 {
-    use HasFactory, Notifiable;
-
-    protected $guard ='admin';
-
+    use HasFactory;
+    protected $guard = "admin";
     protected $fillable = [
         'name',
         'email',
         'password',
+        'remember_token'
     ];
 
     protected $hidden = [
         'password',
         'remember_token',
     ];
-
-    protected function casts(): array
+    public function setPasswordAttribute($value)
     {
-        return [
-            'email_verified_at' => 'datetime',
-            'password' => 'hashed',
-        ];
+        if (!empty($value)) {
+            $this->attributes['password'] = Hash::make($value);
+        }
     }
 }
