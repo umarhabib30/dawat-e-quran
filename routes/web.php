@@ -3,6 +3,7 @@
 use App\Http\Controllers\Admin\AdminAuthController;
 use App\Http\Controllers\Admin\AdminCourseController;
 use App\Http\Controllers\Admin\AdminDashboardController;
+use App\Http\Controllers\Admin\AdminInstructorController;
 use App\Http\Controllers\Admin\CategoryController;
 use App\Http\Controllers\User\AboutController;
 use App\Http\Controllers\User\ContactUsController;
@@ -47,4 +48,12 @@ Route::middleware('auth:admin')->group(function () {
 
     Route::get('/course', [AdminCourseController::class, 'create'])->name('course.create');
     Route::post('/course/create',[AdminCourseController::class,'store'])->name('course.store');
+
+    // instructor
+    Route::get('admin/instructor/index',[AdminInstructorController::class, 'index'])->name('instructor.index');
+    Route::get('admin/instructor/create',[AdminInstructorController::class, 'create'])->name('instructor.create');
+    Route::post('admin/instructor/store',[AdminInstructorController::class, 'store'])->name('instructor.store');
+    Route::get('admin/instructor/edit/{id',[AdminInstructorController::class, 'edit'])->name('instructor.edit');
+    Route::post('admin/instructor/update',[AdminInstructorController::class, 'update'])->name('instructor.update');
+    Route::get('admin/instructor/delete/{id',[AdminInstructorController::class, 'delete'])->name('instructor.delete');
 });

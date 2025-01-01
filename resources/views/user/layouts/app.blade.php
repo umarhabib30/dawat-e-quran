@@ -184,10 +184,10 @@
                         <h4 class="text-light mb-4">Explore Link</h4>
                         <div class="h-100 d-inline-flex align-items-center mt-4" bis_skin_checked="1">
                             <span class="text-body ">Follow Us:</span>
-                            <a class=" px-2" href=""><i class="fab fa-facebook-f"></i></a>
-                            <a class=" px-2" href=""><i class="fab fa-twitter"></i></a>
-                            <a class=" px-2" href=""><i class="fab fa-linkedin-in"></i></a>
-                            <a class=" px-2" href=""><i class="fab fa-instagram"></i></a>
+                            <a target="__blank" class=" px-2" href="https://www.facebook.com/dawatquran12?mibextid=ZbWKwL"><i class="fab fa-facebook-f"></i></a>
+                            <a target="__blank" class=" px-2" href="https://youtube.com/@dawatequranwithayesha?si=h-dPBPXPCGj_knpl"><i class="fab fa-youtube"></i></a>
+                            <a target="__blank" class=" px-2" href="https://whatsapp.com/channel/0029VaDIzNcGpLHVIVTcWz2e"><i class="fab fa-whatsapp"></i></a>
+                            <a target="__blank" class=" px-2" href="https://www.instagram.com/dawat_quran_12/profilecard/?igsh=bmNtOW4xOWlvY3Nj"><i class="fab fa-instagram"></i></a>
                         </div>
                     </div>
                 </div>

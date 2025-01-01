@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\User;
 
 use App\Http\Controllers\Controller;
+use App\Models\Instructor;
 use Illuminate\Http\Request;
 
 class InstructorController extends Controller
@@ -16,6 +17,7 @@ class InstructorController extends Controller
             'title' => 'Instructors',
             'breadcrumbs' => array('home'=> 'Home','instructors'=> 'Instructors'),
             'active' => 'instructors',
+            'instructors' => Instructor::all(),
         ];
         return view('user.instructor.index',$data);
     }

@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers\Admin;
 
+use App\Helpers\ImageHelper;
 use App\Http\Controllers\Controller;
+use App\Models\Instructor;
 use Illuminate\Http\Request;
 
 class AdminInstructorController extends Controller
@@ -12,7 +14,13 @@ class AdminInstructorController extends Controller
      */
     public function index()
     {
-        //
+        $data = [
+            'active' => 'instructor',
+            'title' => 'Instructors',
+            'instructors' => Instructor::all(),
+        ];
+
+        return view('admin.instructor.index', $data);
     }
 
     /**
@@ -20,7 +28,12 @@ class AdminInstructorController extends Controller
      */
     public function create()
     {
-        //
+        $data = [
+            'active' => 'instructor',
+            'title' => 'Instructors',
+        ];
+
+        return view('admin.instructor.create', $data);
     }
 
     /**
@@ -28,7 +41,17 @@ class AdminInstructorController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        try {
+            $path = ImageHelper::saveImage($request->image, 'Images/instructor');
+            $data = $request->all();
+            $data['image'] = $path;
+            Instructor::create($data);
+            alert()->success('Success', 'Instructor added successfully.');
+            return redirect()->back();
+        } catch (\Exception $e) {
+            alert()->error('Error', $e->getMessage());
+            return redirect()->back();
+        }
     }
 
     /**

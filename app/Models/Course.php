@@ -18,4 +18,8 @@ class Course extends Model
     {
         return $this->belongsTo(Category::class, 'category_id');
     }
+
+    public function lessonCount(){
+        return $this->hasMany(Chapter::class,'course_id');
+    }
 }

@@ -243,6 +243,21 @@
                                     </ul>
                                 </div>
                             </li>
+                            <li class="nav-item">
+                                <a class="nav-link @if ($active == 'instructor') active @endif" href="#"
+                                    data-toggle="collapse" aria-expanded="false" data-target="#submenu-3"
+                                    aria-controls="submenu-3"><i class="fa fa-fw fa-rocket"></i>Instructor</a>
+                                <div id="submenu-3" class="collapse submenu" style="">
+                                    <ul class="nav flex-column">
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="{{ route('instructor.create') }}">Add  Instructor</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="{{ route('instructor.index') }}">View All</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
                             {{-- <li class="nav-item">
                                 <a class="nav-link @if ($active == 'color') active @endif" href="#"
                                     data-toggle="collapse" aria-expanded="false" data-target="#submenu-4"
@@ -355,8 +370,8 @@
                                     </ul>
                                 </div>
                             </li> --}}
-                           
-                           
+
+
 
                         </ul>
                     </div>
