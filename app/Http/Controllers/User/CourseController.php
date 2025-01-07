@@ -3,6 +3,8 @@
 namespace App\Http\Controllers\User;
 
 use App\Http\Controllers\Controller;
+use App\Models\Category;
+use App\Models\Chapter;
 use App\Models\Course;
 use Illuminate\Http\Request;
 
@@ -18,7 +20,8 @@ class CourseController extends Controller
             'title' => 'Courses',
             'breadcrumbs' => array('home'=> 'Home','courses'=> 'Courses'),
             'active' => 'courses',
-            'courses' => $courses
+            'courses' => $courses,
+            'categories' => Category::all(),
         ];
         return view('user.course.index',$data);
     }
@@ -42,9 +45,16 @@ class CourseController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(string $id)
+    public function show($id)
     {
-        //
+        $data =[
+            'title' => 'Course Details',
+            'breadcrumbs' => array('home'=> 'Home','courses'=> 'Courses'),
+            'active' => 'courses',
+            'course' => Course::find($id),
+            'chapters' => Chapter::where('course_id',$id)->get()
+        ];
+        return view('user.course.details',$data);
     }
 
     /**

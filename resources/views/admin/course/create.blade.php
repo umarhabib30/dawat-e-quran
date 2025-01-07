@@ -16,7 +16,7 @@
                             @endforeach
                         </select>
                     </div>
-                    
+
                     <div class="form-group col-md-6">
                         <label for="title" class="form-label">Title</label>
                         <input type="text" name="title" id="title" required class="form-control">
@@ -25,13 +25,13 @@
                         <label for="auther" class="form-label">Auther</label>
                         <input type="text" name="auther" id="auther" required class="form-control">
                     </div>
-                    
+
                     <div class="form-group col-md-6">
                         <label for="images" class="form-label">Image</label>
                         <input type="file" name="image" id="images" class="form-control" required>
                     </div>
                     <div class="form-group col-md-12">
-                        <label for="description" class="form-label">Product Description</label>
+                        <label for="description" class="form-label">Course Description</label>
                         <textarea name="description" id="description" class="form-control" rows="4"></textarea>
                     </div>
 

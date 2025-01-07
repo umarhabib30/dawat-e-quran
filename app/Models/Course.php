@@ -19,7 +19,19 @@ class Course extends Model
         return $this->belongsTo(Category::class, 'category_id');
     }
 
-    public function lessonCount(){
-        return $this->hasMany(Chapter::class,'course_id');
+    public function chapters()
+    {
+        return $this->hasMany(Chapter::class, 'course_id');
+    }
+
+    public function lessons()
+    {
+        return $this->hasManyThrough(Lesson::class, Chapter::class);
+    }
+
+
+    public function lessonCount()
+    {
+        return $this->hasMany(Chapter::class, 'course_id');
     }
 }

@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Admin;
 use App\Helpers\ImageHelper;
 use App\Http\Controllers\Controller;
 use App\Models\Category;
+use App\Models\Chapter;
 use App\Models\Course;
 use Illuminate\Http\Request;
 
@@ -15,7 +16,13 @@ class AdminCourseController extends Controller
      */
     public function index()
     {
-        //
+        $data = [
+            'active' => 'course',
+            'title' => 'Courses',
+            'courses' => Course::all(),
+        ];
+
+        return view('admin.course.index', $data);
     }
 
     /**
@@ -63,7 +70,7 @@ class AdminCourseController extends Controller
      */
     public function show(string $id)
     {
-        //
+
     }
 
     /**
@@ -71,22 +78,54 @@ class AdminCourseController extends Controller
      */
     public function edit(string $id)
     {
-        //
+        $data = [
+            'active' => 'course',
+            'title' => 'Edit Course',
+            'categories' => Category::all(),
+            'course' => Course::find($id),
+        ];
+
+        return view('admin.course.edit', $data);
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, string $id)
+    public function update(Request $request)
     {
-        //
+
+        try{
+            $course = Course::find($request->course_id);
+            if($request->hasFile('image')){
+                $data = $request->all();
+                $data['image'] = ImageHelper::saveImage($request->image,'Images/course');
+                alert()->success('Success', 'Course Updated Successfully');
+                return redirect()->route('course.index');
+            }else{
+                $course->update($request->all());
+                alert()->success('Success', 'Course Updated Successfully');
+                return redirect()->route('course.index');
+            }
+        }catch(\Exception $e){
+            alert()->error('Error',  $e->getMessage());
+            return redirect()->back()->withInput();
+        }
     }
 
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(string $id)
+    public function delete(string $id)
     {
-        //
+        try {
+            Course::find($id)->delete();
+            alert()->success('Success', 'Course deleted Successfully');
+            return redirect()->back();
+        } catch (\Exception $e) {
+            alert()->error('Error',  $e->getMessage());
+            return redirect()->back()->withInput();
+        }
     }
+
+
 }

@@ -15,16 +15,13 @@
                     </div>
                     <div class="mb-4">
                         <h6 class="fw-bold">Category</h6>
+                        @foreach ($categories as $category)
                         <div class="form-check">
                             <input class="form-check-input" type="checkbox" id="type-1">
-                            <label class="form-check-label" for="type-1">Course</label>
-                            <span class="ms-2">(20,000)</span>
+                            <label class="form-check-label" for="type-1">{{ $category->name }}</label>
+                            <span class="ms-2">({{ $category->course->count() }})</span>
                         </div>
-                        <div class="form-check">
-                            <input class="form-check-input" type="checkbox" id="type-2">
-                            <label class="form-check-label" for="type-2">Bundle</label>
-                            <span class="ms-2">(20,000)</span>
-                        </div>
+                        @endforeach
                     </div>
                     <a href="#" class="btn btn-outline-danger w-100">
                         <i class="fas fa-times"></i> Clear All Filters
@@ -54,7 +51,7 @@
                                             <i class="fas fa-users me-1"></i> 54 Students
                                         </span> --}}
                                     </div>
-                                    <a href="single-course.html" class="text-decoration-none">
+                                    <a href="{{ route('course.details',$course->id) }}" class="text-decoration-none">
                                         <h5 class="card-title">{{ $course->title }}</h5>
                                     </a>
                                     <p class="card-text">{{ Str::limit($course->description, 250, '...')  }}</p>
