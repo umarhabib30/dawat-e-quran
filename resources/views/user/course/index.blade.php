@@ -45,7 +45,7 @@
                                     </div>
                                     <div class="d-flex mb-2 flex-wrap">
                                         <span class="me-3">
-                                            <i class="fas fa-calendar-alt me-1"></i> {{ $course->lessonCount->count() }} Lessons
+                                            <i class="fas fa-calendar-alt me-1"></i> {{ $course->lessonCount->count() }} Chapter
                                         </span>
                                         {{-- <span>
                                             <i class="fas fa-users me-1"></i> 54 Students
