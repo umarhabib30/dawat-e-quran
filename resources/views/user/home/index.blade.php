@@ -114,7 +114,7 @@
                 </div>
                 <div class="col-lg-6 col-xl-4">
                     <div class="activities-item p-4 wow fadeIn" data-wow-delay="0.3s">
-                        <i class="fa fa-donate fa-4x text-dark"></i>
+                        <i class="fa fa-mosque fa-4x text-dark"></i>
                         <div class="ms-4">
                             <h4>Tajweed:</h4>
                             <p class="mb-4">Learning to read the Quran with accuracy</p>
@@ -124,7 +124,7 @@
                 </div>
                 <div class="col-lg-6 col-xl-4">
                     <div class="activities-item p-4 wow fadeIn" data-wow-delay="0.5s">
-                        <i class="fa fa-quran fa-4x text-dark"></i>
+                        <i class="fa fa-mosque fa-4x text-dark"></i>
                         <div class="ms-4">
                             <h4>Understanding:</h4>
                             <p class="mb-4">Learning to understand the Quran</p>
@@ -134,7 +134,7 @@
                 </div>
                 <div class="col-lg-6 col-xl-4">
                     <div class="activities-item p-4 wow fadeIn" data-wow-delay="0.1s">
-                        <i class="fa fa-book fa-4x text-dark"></i>
+                        <i class="fa fa-mosque fa-4x text-dark"></i>
                         <div class="ms-4">
                             <h4>Recitation:</h4>
                             <p class="mb-4">Learning to recite the Quran in various modes</p>
@@ -144,7 +144,7 @@
                 </div>
                 <div class="col-lg-6 col-xl-4">
                     <div class="activities-item p-4 wow fadeIn" data-wow-delay="0.3s">
-                        <i class="fa fa-book-open fa-4x text-dark"></i>
+                        <i class="fa fa-mosque fa-4x text-dark"></i>
                         <div class="ms-4">
                             <h4>Research:</h4>
                             <p class="mb-4">Learning how to conduct research on the Quran</p>
@@ -154,7 +154,7 @@
                 </div>
                 <div class="col-lg-6 col-xl-4">
                     <div class="activities-item p-4 wow fadeIn" data-wow-delay="0.5s">
-                        <i class="fa fa-hands fa-4x text-dark"></i>
+                        <i class="fa fa-mosque fa-4x text-dark"></i>
                         <div class="ms-4">
                             <h4>Interpretation:</h4>
                             <p class="mb-4">Learning how to interpret the Quran</p>
@@ -164,7 +164,7 @@
                 </div>
                 <div class="col-lg-6 col-xl-4">
                     <div class="activities-item p-4 wow fadeIn" data-wow-delay="0.5s">
-                        <i class="fa fa-hands fa-4x text-dark"></i>
+                        <i class="fa fa-mosque fa-4x text-dark"></i>
                         <div class="ms-4">
                             <h4>Communication:</h4>
                             <p class="mb-4">Learning how to communicate the Quran's teachings to others</p>
@@ -174,7 +174,7 @@
                 </div>
                 <div class="col-lg-6 col-xl-4">
                     <div class="activities-item p-4 wow fadeIn" data-wow-delay="0.5s">
-                        <i class="fa fa-hands fa-4x text-dark"></i>
+                        <i class="fa fa-mosque fa-4x text-dark"></i>
                         <div class="ms-4">
                             <h4>Academic skills: </h4>
                             <p class="mb-4">Learning academic skills such as critical reading and argumentation</p>
@@ -184,7 +184,7 @@
                 </div>
                 <div class="col-lg-6 col-xl-4">
                     <div class="activities-item p-4 wow fadeIn" data-wow-delay="0.5s">
-                        <i class="fa fa-hands fa-4x text-dark"></i>
+                        <i class="fa fa-mosque fa-4x text-dark"></i>
                         <div class="ms-4">
                             <h4>Arabic: </h4>
                             <p class="mb-4">Learning to read and use both classical and modern</p>
@@ -194,7 +194,7 @@
                 </div>
                 <div class="col-lg-6 col-xl-4">
                     <div class="activities-item p-4 wow fadeIn" data-wow-delay="0.5s">
-                        <i class="fa fa-hands fa-4x text-dark"></i>
+                        <i class="fa fa-mosque fa-4x text-dark"></i>
                         <div class="ms-4">
                             <h4>Islamic values: </h4>
                             <p class="mb-4"> Integrating Islamic values into social and moral education </p>
@@ -204,7 +204,7 @@
                 </div>
                 <div class="col-lg-6 col-xl-4">
                     <div class="activities-item p-4 wow fadeIn" data-wow-delay="0.5s">
-                        <i class="fa fa-hands fa-4x text-dark"></i>
+                        <i class="fa fa-mosque fa-4x text-dark"></i>
                         <div class="ms-4">
                             <h4>Community: </h4>
                             <p class="mb-4"> Participating in community activities and events</p>
@@ -214,7 +214,7 @@
                 </div>
                 <div class="col-lg-6 col-xl-4">
                     <div class="activities-item p-4 wow fadeIn" data-wow-delay="0.5s">
-                        <i class="fa fa-hands fa-4x text-dark"></i>
+                        <i class="fa fa-mosque fa-4x text-dark"></i>
                         <div class="ms-4">
                             <h4>Self-discipline: </h4>
                             <p class="mb-4">Developing self-discipline and self-respect</p>
@@ -224,7 +224,7 @@
                 </div>
                 <div class="col-lg-6 col-xl-4">
                     <div class="activities-item p-4 wow fadeIn" data-wow-delay="0.5s">
-                        <i class="fa fa-hands fa-4x text-dark"></i>
+                        <i class="fa fa-mosque fa-4x text-dark"></i>
                         <div class="ms-4">
                             <h4>Self-belief:</h4>
                             <p class="mb-4">Developing self-belief to reach goals</p>
@@ -235,6 +235,7 @@
             </div>
         </div>
     </div>
+
     <!-- Activities Start -->
 
 
