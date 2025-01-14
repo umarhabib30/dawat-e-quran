@@ -19,6 +19,7 @@
                                 <tr>
                                     <th>Sr#</th>
                                     <th>Name</th>
+                                    <th>Image</th>
                                     <th>Role</th>
                                     <th>Experience</th>
                                     <th>Introduction</th>
@@ -31,11 +32,12 @@
                                 <tr>
                                     <td>{{ $index + 1 }}</td>
                                     <td>{{ $instructor->name }}</td>
+                                    <td><img src="{{ asset($instructor->image) }}" alt="" height="80px"></td>
                                     <td>{{ $instructor->role }}</td>
                                     <td>{{ $instructor->experience }}</td>
                                     <td>{{ $instructor->intro }}</td>
-                                    <td><a href="{{ route('instructor.edit',$instructor->id) }}" class="btn btn-primary">Edit</a></td>
-                                    <td><a href="{{ route('instructor.delete',$instructor->id) }}" class="btn btn-danger">Delete</a></td>
+                                    <td><a href="{{ route('instructor.edit', $instructor->id) }}" class="btn btn-primary">Edit</a></td>
+                                    <td><a href="{{ route('instructor.delete', $instructor->id) }}" class="btn btn-danger">Delete</a></td>
 
                                 </tr>
                             @endforeach

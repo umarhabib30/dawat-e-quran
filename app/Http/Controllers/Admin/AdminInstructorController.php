@@ -57,32 +57,65 @@ class AdminInstructorController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(string $id)
-    {
-        //
-    }
+    public function show(string $id) {}
 
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(string $id)
+    public function edit($id)
     {
-        //
+        $data = [
+            'active' => 'instructor',
+            'title' => 'Edit Instructors',
+            'instructor' => Instructor::find($id),
+        ];
+
+        return view('admin.instructor.edit', $data);
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, string $id)
+    public function update(Request $request)
     {
-        //
+        try {
+            $instructor = Instructor::find($request->id);
+            if ($request->hasFile('image')) {
+                $path =  ImageHelper::saveImage($request->image, 'Images/instructor');
+                $data = $request->all();
+                $data['image'] = $path;
+                $instructor->update($data);
+                alert()->success('Success', 'Instructor Updated successfully.');
+                return redirect()->back();
+            } else {
+                $instructor->update([
+                    'name' => $request->name,
+                    'role' => $request->role,
+                    'intro' => $request->intro,
+                    'experience' => $request->experience,
+                    'subject' => $request->subject,
+                ]);
+                alert()->success('Success', 'Instructor Updated successfully.');
+                return to_route('instructor.index');
+            }
+        } catch (\Exception $e) {
+            alert()->error('Error', $e->getMessage());
+            return redirect()->back();
+        }
     }
 
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(string $id)
+    public function destroy($id)
     {
-        //
+        try {
+            Instructor::find($id)->delete();
+            alert()->success('Success', 'Instructor added successfully.');
+            return redirect()->back();
+        } catch (\Exception $e) {
+            alert()->error('Error', $e->getMessage());
+            return redirect()->back();
+        }
     }
 }

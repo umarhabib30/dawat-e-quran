@@ -73,7 +73,7 @@ Route::middleware('auth:admin')->group(function () {
     Route::get('admin/instructor/index', [AdminInstructorController::class, 'index'])->name('instructor.index');
     Route::get('admin/instructor/create', [AdminInstructorController::class, 'create'])->name('instructor.create');
     Route::post('admin/instructor/store', [AdminInstructorController::class, 'store'])->name('instructor.store');
-    Route::get('admin/instructor/edit/{id', [AdminInstructorController::class, 'edit'])->name('instructor.edit');
+    Route::get('admin/instructor/edit/{id}', [AdminInstructorController::class, 'edit'])->name('instructor.edit');
     Route::post('admin/instructor/update', [AdminInstructorController::class, 'update'])->name('instructor.update');
-    Route::get('admin/instructor/delete/{id', [AdminInstructorController::class, 'delete'])->name('instructor.delete');
+    Route::get('admin/instructor/delete/{id}', [AdminInstructorController::class, 'delete'])->name('instructor.delete');
 });

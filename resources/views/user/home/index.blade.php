@@ -7,13 +7,13 @@
                 <div class="col-xl-6">
                     <div class="row g-4">
                         <div class="col-6">
-                            <img src="{{ asset('assets/user/img/about-1.jpg') }}" class="img-fluid h-100 wow zoomIn"
+                            <img src="{{ asset('assets/user/img/pk.png') }}" class="img-fluid h-100 wow zoomIn"
                                 data-wow-delay="0.1s" alt="">
                         </div>
                         <div class="col-6">
-                            <img src="{{ asset('assets/user/img/about-2.jpg') }}" class="img-fluid pb-3 wow zoomIn"
+                            <img src="{{ asset('assets/user/img/saudi.png') }}" class="img-fluid pb-3 wow zoomIn"
                                 data-wow-delay="0.1s" alt="">
-                            <img src="{{ asset('assets/user/img/about-3.jpg') }}" class="img-fluid pt-3 wow zoomIn"
+                            <img src="{{ asset('assets/user/img/flag.png') }}" class="img-fluid pt-3 wow zoomIn"
                                 data-wow-delay="0.1s" alt="">
                         </div>
                     </div>
