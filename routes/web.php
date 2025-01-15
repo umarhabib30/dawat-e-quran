@@ -26,6 +26,7 @@ Route::get('contact-us', [ContactUsController::class, 'index'])->name('contact.u
 Route::get('courses', [CourseController::class, 'index'])->name('courses');
 Route::get('course/details/{id}', [CourseController::class, 'show'])->name('course.details');
 Route::get('instructors', [InstructorController::class, 'index'])->name('instructors');
+Route::get('instructor/details/{id}', [InstructorController::class, 'show'])->name('instructor.show');
 Route::get('donate', [DonationController::class, 'index'])->name('donate');
 
 

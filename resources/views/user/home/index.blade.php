@@ -617,116 +617,34 @@
     <div class="container-fluid testimonial py-5">
         <div class="container py-5">
             <div class="text-center mx-auto mb-5 wow fadeIn" data-wow-delay="0.1s" style="max-width: 700px;">
-                <p class="fs-5 text-uppercase text-primary">Testimonial</p>
-                <h1 class="display-3" style="color: #603D2F !important">What People Say About Islam</h1>
+                {{-- <p class="fs-5 text-uppercase text-primary">Testimonial</p> --}}
+                <h1 class="display-3" style="color: #603D2F !important">We are Collaboration with </h1>
             </div>
             <div class="owl-carousel testimonial-carousel wow fadeIn" data-wow-delay="0.1s">
-                <div class="testimonial-item">
-                    <div class="d-flex mb-3">
-                        <div class="position-relative">
-                            <img src="{{ asset('assets/user/img/testimonial-1.jpg') }}" class="img-fluid"
-                                alt="">
-                            <div class="btn-md-square bg-primary rounded-circle position-absolute"
-                                style="top: 25px; left: -25px;">
-                                <i class="fa fa-quote-left text-dark"></i>
-                            </div>
-                        </div>
-                        <div class="ps-3 my-auto ">
-                            <h5 class="mb-0">Ahmed Ali</h5>
-                            <p class="m-0">Teacher</p>
-                        </div>
-                    </div>
-                    <div class="testimonial-content">
-                        <div class="d-flex">
-                            <i class="fas fa-star text-primary"></i>
-                            <i class="fas fa-star text-primary"></i>
-                            <i class="fas fa-star text-primary"></i>
-                            <i class="fas fa-star text-primary"></i>
-                            <i class="fas fa-star text-primary"></i>
-                        </div>
-                        <p class="fs-5 m-0 pt-3">Alhamdulillah, this academy has transformed my understanding of the Quran and strengthened my connection to Allah.</p>
-                    </div>
+                <div class="testimonial-item" style="padding: 0;">
+                    <img src="{{ asset('assets/user/img/c1.png') }}" class="w-100 img-fluid" alt="Testimonial Image 1" style="height: auto; object-fit: cover;">
                 </div>
-                <div class="testimonial-item">
-                    <div class="d-flex mb-3">
-                        <div class="position-relative">
-                            <img src="{{ asset('assets/user/img/g1.jpg') }}" class="img-fluid"
-                                alt="">
-                            <div class="btn-md-square bg-primary rounded-circle position-absolute"
-                                style="top: 25px; left: -25px;">
-                                <i class="fa fa-quote-left text-dark"></i>
-                            </div>
-                        </div>
-                        <div class="ps-3 my-auto ">
-                            <h5 class="mb-0">Fatima Zahra</h5>
-                            <p class="m-0">Doctor</p>
-                        </div>
-                    </div>
-                    <div class="testimonial-content">
-                        <div class="d-flex">
-                            <i class="fas fa-star text-primary"></i>
-                            <i class="fas fa-star text-primary"></i>
-                            <i class="fas fa-star text-primary"></i>
-                            <i class="fas fa-star text-primary"></i>
-                            <i class="fas fa-star text-primary"></i>
-                        </div>
-                        <p class="fs-5 m-0 pt-3">The personalized teaching approach made learning Tajweed and memorization a joyful and rewarding experience.</p>
-                    </div>
+                <div class="testimonial-item" style="padding: 0;">
+                    <img src="{{ asset('assets/user/img/c2.png') }}" class="w-100 img-fluid" alt="Testimonial Image 2" style="height: auto; object-fit: cover;">
                 </div>
-                <div class="testimonial-item">
-                    <div class="d-flex mb-3">
-                        <div class="position-relative">
-                            <img src="{{ asset('assets/user/img/testimonial-3.jpg') }}" class="img-fluid"
-                                alt="">
-                            <div class="btn-md-square bg-primary rounded-circle position-absolute"
-                                style="top: 25px; left: -25px;">
-                                <i class="fa fa-quote-left text-dark"></i>
-                            </div>
-                        </div>
-                        <div class="ps-3 my-auto ">
-                            <h5 class="mb-0">Yusuf Karim</h5>
-                            <p class="m-0">Engineer</p>
-                        </div>
-                    </div>
-                    <div class="testimonial-content">
-                        <div class="d-flex">
-                            <i class="fas fa-star text-primary"></i>
-                            <i class="fas fa-star text-primary"></i>
-                            <i class="fas fa-star text-primary"></i>
-                            <i class="fas fa-star text-primary"></i>
-                            <i class="fas fa-star text-primary"></i>
-                        </div>
-                        <p class="fs-5 m-0 pt-3">Studying here has enhanced my recitation skills and deepened my appreciation for the beauty of the Quran.</p>
-                    </div>
+                <div class="testimonial-item" style="padding: 0;">
+                    <img src="{{ asset('assets/user/img/c3.png') }}" class="w-100 img-fluid" alt="Testimonial Image 3" style="height: auto; object-fit: cover;">
                 </div>
-                <div class="testimonial-item">
-                    <div class="d-flex mb-3">
-                        <div class="position-relative">
-                            <img src="{{ asset('assets/user/img/g2.jpg') }}" class="img-fluid"
-                                alt="">
-                            <div class="btn-md-square bg-primary rounded-circle position-absolute"
-                                style="top: 25px; left: -25px;">
-                                <i class="fa fa-quote-left text-dark"></i>
-                            </div>
-                        </div>
-                        <div class="ps-3 my-auto ">
-                            <h5 class="mb-0">Aisha Malik</h5>
-                            <p class="m-0">Homemaker</p>
-                        </div>
-                    </div>
-                    <div class="testimonial-content">
-                        <div class="d-flex">
-                            <i class="fas fa-star text-primary"></i>
-                            <i class="fas fa-star text-primary"></i>
-                            <i class="fas fa-star text-primary"></i>
-                            <i class="fas fa-star text-primary"></i>
-                            <i class="fas fa-star text-primary"></i>
-                        </div>
-                        <p class="fs-5 m-0 pt-3">The supportive environment has helped me grow spiritually and gain confidence in my knowledge of the Quran.</p>
-                    </div>
+                <div class="testimonial-item" style="padding: 0;">
+                    <img src="{{ asset('assets/user/img/c4.png') }}" class="w-100 img-fluid" alt="Testimonial Image 4" style="height: auto; object-fit: cover;">
+                </div>
+                <div class="testimonial-item" style="padding: 0;">
+                    <img src="{{ asset('assets/user/img/c5.png') }}" class="w-100 img-fluid" alt="Testimonial Image 5" style="height: auto; object-fit: cover;">
+                </div>
+                <div class="testimonial-item" style="padding: 0;">
+                    <img src="{{ asset('assets/user/img/c6.png') }}" class="w-100 img-fluid" alt="Testimonial Image 6" style="height: auto; object-fit: cover;">
+                </div>
+                <div class="testimonial-item" style="padding: 0;">
+                    <img src="{{ asset('assets/user/img/c7.png') }}" class="w-100 img-fluid" alt="Testimonial Image 7" style="height: auto; object-fit: cover;">
                 </div>
             </div>
         </div>
     </div>
+
     <!-- Testiminial End -->
 @endsection

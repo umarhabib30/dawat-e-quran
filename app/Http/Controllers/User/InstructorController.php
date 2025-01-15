@@ -43,7 +43,13 @@ class InstructorController extends Controller
      */
     public function show(string $id)
     {
-        //
+        $data =[
+            'title' => 'Instructor',
+            'breadcrumbs' => array('home'=> 'Home','instructors'=> 'Instructors'),
+            'active' => 'instructors',
+            'instructor' => Instructor::find($id),
+        ];
+        return view('user.instructor.details',$data);
     }
 
     /**

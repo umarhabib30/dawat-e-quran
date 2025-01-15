@@ -19,7 +19,7 @@
                             <small>({{ $instructor->role }}) </small>
                             <p class="mb-0">{{ Str::limit($instructor->intro , 200, '...') }}</p>
                         </div>
-                        <a href="#" class="btn btn-primary w-100" style="margin-top: auto;">View</a>
+                        <a href="{{ route('instructor.show',$instructor->id) }}" class="btn btn-primary w-100" style="margin-top: auto;">View</a>
                     </div>
                 </div>
 

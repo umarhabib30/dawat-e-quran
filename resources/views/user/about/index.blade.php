@@ -14,7 +14,7 @@
             </div>
             <div class="col-lg-8 col-xl-7">
                 <div class="team-item wow fadeIn" data-wow-delay="0.1s">
-                    <h1>Mrs. Ayesha Shahzad</h1>
+                    <h1>Mrs. Shahzad</h1>
                     <h5 class="fw-normal fst-italic text-primary mb-4">President</h5>
                     <p class="mb-4">Dawat-e-Quran international accadmy was established in
                         14 November 2021.It's start a smalll whtsapp group and few team members Staring course details maximum 2 or 3. Now become a small group a biggest accadmy. It's head office in Saudi Arabia and it's accadmy Founder Mrs Ayesha Shahzad. This accadmy provided all course free of cost provided Walid degree accadmy has been working in national and international Level. Students ratio 500+ and team members 20+ accadmy presented wew Course's in differen Islamic subjects with famous scholar's classes. Today accadmy officially Published first recorded book of this prospects. Allhumdulliah Allah almighty.
