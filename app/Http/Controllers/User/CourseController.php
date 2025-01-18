@@ -15,69 +15,62 @@ class CourseController extends Controller
      */
     public function index()
     {
-        $courses = Course::all();
-        $data =[
+        $courses = Course::paginate(10);
+        $data = [
             'title' => 'Courses',
-            'breadcrumbs' => array('home'=> 'Home','courses'=> 'Courses'),
+            'breadcrumbs' => array('home' => 'Home', 'courses' => 'Courses'),
             'active' => 'courses',
             'courses' => $courses,
             'categories' => Category::all(),
         ];
-        return view('user.course.index',$data);
+        return view('user.course.index', $data);
     }
 
-    /**
-     * Show the form for creating a new resource.
-     */
-    public function create()
-    {
-        //
-    }
-
-    /**
-     * Store a newly created resource in storage.
-     */
-    public function store(Request $request)
-    {
-        //
-    }
-
-    /**
-     * Display the specified resource.
-     */
     public function show($id)
     {
-        $data =[
+        $data = [
             'title' => 'Course Details',
-            'breadcrumbs' => array('home'=> 'Home','courses'=> 'Courses'),
+            'breadcrumbs' => array('home' => 'Home', 'courses' => 'Courses'),
             'active' => 'courses',
             'course' => Course::find($id),
-            'chapters' => Chapter::where('course_id',$id)->get()
+            'chapters' => Chapter::where('course_id', $id)->get()
         ];
-        return view('user.course.details',$data);
+        return view('user.course.details', $data);
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     */
-    public function edit(string $id)
+
+    public function filter(Request $request)
     {
-        //
+        $keyword = $request->input('keyword');
+        $categories = $request->input('categories', []);
+        $page = $request->input('page', 1); // Get current page from the request
+
+        $query = Course::query();
+
+        // Apply keyword filter
+        if ($keyword) {
+            $query->where(function ($q) use ($keyword) {
+                $q->where('title', 'like', '%' . $keyword . '%')
+                    ->orWhere('author', 'like', '%' . $keyword . '%');
+            });
+        }
+
+        // Apply category filter if categories are selected
+        if (!empty($categories)) {
+            $query->whereIn('category_id', $categories);
+        }
+
+        // Paginate the results
+        $courses = $query->get();  // Adjust the number per page as needed
+
+        if ($courses->isEmpty()) {
+            return response()->json(['message' => 'No courses found.']);
+        }
+
+        // Return the courses and pagination as rendered views
+        return response()->json([
+            'courses' => view('user.course.partial', compact('courses'))->render(),
+        ]);
     }
 
-    /**
-     * Update the specified resource in storage.
-     */
-    public function update(Request $request, string $id)
-    {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     */
-    public function destroy(string $id)
-    {
-        //
-    }
 }
