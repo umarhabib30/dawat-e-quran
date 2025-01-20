@@ -28,6 +28,7 @@ class ContactUsController extends Controller
             'message' => $request->message,
         ]);
 
+        toastr()->success('success','Your message send to Admin!😊');
         return redirect()->back();
     }
 }
