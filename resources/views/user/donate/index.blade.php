@@ -129,8 +129,7 @@
             textArea.select();
             document.execCommand("copy");
             document.body.removeChild(textArea);
-
-            alert("Copied to clipboard!");
+            toastr.success('Copied to clipboard!');
         }
     </script>
 @endsection

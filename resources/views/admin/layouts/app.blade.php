@@ -59,7 +59,7 @@
                                     <span class="status"></span><span class="ml-2">Available</span>
                                 </div>
                                 <a class="dropdown-item" href="#"><i class="fas fa-user mr-2"></i>Account</a>
-                                <a class="dropdown-item" href="{{route('admin.logout')}}"><i
+                                <a class="dropdown-item" href="{{ route('admin.logout') }}"><i
                                         class="fas fa-power-off mr-2"></i>Logout</a>
                             </div>
                         </li>
@@ -88,9 +88,8 @@
                             </li>
                             <li class="nav-item ">
                                 <a class="nav-link @if ($active == 'dashboard') active @endif "
-                                    href="{{ route('dashboard') }}"><i
-                                        class="fa fa-fw fa-user-circle"></i>Dashboard <span
-                                        class="badge badge-success">6</span></a>
+                                    href="{{ route('dashboard') }}"><i class="fa fa-fw fa-user-circle"></i>Dashboard
+                                    <span class="badge badge-success">6</span></a>
                             </li>
                             <li class="nav-item ">
                                 <a class="nav-link @if ($active == 'category') active @endif " href="#"
@@ -133,11 +132,26 @@
                                 <div id="submenu-3" class="collapse submenu" style="">
                                     <ul class="nav flex-column">
                                         <li class="nav-item">
-                                            <a class="nav-link" href="{{ route('instructor.create') }}">Add  Instructor</a>
+                                            <a class="nav-link" href="{{ route('instructor.create') }}">Add
+                                                Instructor</a>
                                         </li>
                                         <li class="nav-item">
                                             <a class="nav-link" href="{{ route('instructor.index') }}">View All</a>
                                         </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link @if ($active == 'Contact') active @endif" href="#"
+                                    data-toggle="collapse" aria-expanded="false" data-target="#submenu-4"
+                                    aria-controls="submenu-4"><i class="fa fa-fw fa-rocket"></i>Contact Us </a>
+                                <div id="submenu-4" class="collapse submenu" style="">
+                                    <ul class="nav flex-column">
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="{{ route('contactus.index') }}">ContactUs
+                                                Messages</a>
+                                        </li>
+
                                     </ul>
                                 </div>
                             </li>

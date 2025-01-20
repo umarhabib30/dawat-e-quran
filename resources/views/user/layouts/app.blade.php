@@ -25,9 +25,11 @@
 
     <!-- Customized Bootstrap Stylesheet -->
     <link href="{{ asset('assets/user/css/bootstrap.min.css') }}" rel="stylesheet">
+    
 
     <!-- Template Stylesheet -->
     <link href="{{ asset('assets/user/css/style.css') }}" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/toastr@2.1.4/build/toastr.min.css" rel="stylesheet">
     @yield('style')
 
 </head>
@@ -76,8 +78,7 @@
                 <a href="{{ route('home') }}" class="navbar-brand">
                     <img src="{{ asset('assets/user/logo/logo1.svg') }}" alt="" style="height: 50px">
                 </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#navbarCollapse">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
                     <span class="fa fa-bars text-primary"></span>
                 </button>
                 <div class="collapse navbar-collapse bg-white" id="navbarCollapse">
@@ -91,24 +92,20 @@
                         <a href="{{ route('courses') }}"
                             class="nav-item nav-link @if ($active == 'courses') active @endif">Courses</a>
                         <a href="{{ route('instructors') }}"
-                            class="nav-item nav-link @if ($active == 'instructors') active @endif">Instructers</a>
-                        {{-- <div class="nav-item dropdown">
-                                <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
-                                <div class="dropdown-menu m-0 rounded-0">
-                                    <a href="blog.html" class="dropdown-item">Latest Blog</a>
-                                    <a href="team.html" class="dropdown-item">Our Team</a>
-                                    <a href="testimonial.html" class="dropdown-item">Testimonial</a>
-                                    <a href="404.html" class="dropdown-item">404 Page</a>
-                                </div>
-                            </div> --}}
+                            class="nav-item nav-link @if ($active == 'instructors') active @endif">Instructors</a>
                         <a href="{{ route('contact.us') }}"
-                            class="nav-item nav-link @if ($active == 'contact') active @endif">Contac Us</a>
+                            class="nav-item nav-link @if ($active == 'contact') active @endif">Contact Us</a>
                     </div>
-                    <a href="{{ route('donate') }}"
-                        class="btn btn-primary py-2 px-4 d-none d-xl-inline-block">Donate</a>
+                    <div class="d-flex ml-3 mb-3 mt-3 mt-lg-0">
+                        <a href="{{ route('donate') }}" 
+                           class="btn btn-primary py-2 px-2">Donate</a>
+                    </div>
                 </div>
             </nav>
         </div>
+        
+        
+        
     </div>
     <!-- Topbar End -->
 
@@ -222,6 +219,7 @@
     <script src="{{ asset('assets/user/lib/easing/easing.min.js') }}"></script>
     <script src="{{ asset('assets/user/lib/waypoints/waypoints.min.js') }}"></script>
     <script src="{{ asset('assets/user/lib/owlcarousel/owl.carousel.min.js') }}"></script>
+    <script src="https://cdn.jsdelivr.net/npm/toastr@2.1.4/build/toastr.min.js"></script>
 
     <!-- Template Javascript -->
     <script src="{{ asset('assets/user/js/main.js') }}"></script>
