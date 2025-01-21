@@ -21,19 +21,17 @@ class ContactUsController extends Controller
 
     public function store(Request $request)
     {
-        $contact = ContacUs::create([
-            'name' => $request->name,
-            'email' => $request->email,
-            'subject' => $request->subject,
-            'message' => $request->message,
-        ]);
+        try {
+            $contact = ContacUs::create([
+                'name' => $request->name,
+                'email' => $request->email,
+                'subject' => $request->subject,
+                'message' => $request->message,
+            ]);
 
-        if ($contact) {
-            Alert::success('Success Title', 'Success Message');
-            return redirect()->back();
-        } else {
-           Alert::success('Success Title', 'Success Message');
-            return redirect()->back();
+            return response()->json(['message' => 'Your message has been sent successfully!'], 200);
+        } catch (\Exception $e) {
+            return response()->json(['message' => 'Failed to send your message. Please try again.'], 500);
         }
     }
 }

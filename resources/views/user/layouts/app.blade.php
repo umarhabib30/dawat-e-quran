@@ -2,7 +2,6 @@
 <html lang="en">
 
 <head>
-    
     <meta charset="utf-8">
     <title>{{ $title }}</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
@@ -30,31 +29,20 @@
 
     <!-- Template Stylesheet -->
     <link href="{{ asset('assets/user/css/style.css') }}" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/toastr@2.1.4/build/toastr.min.css" rel="stylesheet"> 
+    <link href="https://cdn.jsdelivr.net/npm/toastr@2.1.4/build/toastr.min.css" rel="stylesheet">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js"
         integrity="sha512-AA1Bzp5Q0K1KanKKmvN/4d3IRKVlv9PYgwFPvm32nPO6QS8yH1HO7LbgB1pgiOxPtfeg5zEn2ba64MUcqJx6CA=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
     @yield('style')
-
     <style>
-        @media (max-width: 992px) {
-    .navbar-collapse {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .navbar-collapse .navbar-nav {
-        margin-bottom: 1rem;
-    }
-
-    .navbar-collapse .btn {
-        margin-top: 0.5rem;
-    }
-}
-
+        @media (max-width: 768px) {
+            .donate {
+                margin-left: 16px;
+                margin-bottom: 1px;
+            }
+        }
     </style>
-
 </head>
 
 <body>
@@ -82,17 +70,22 @@
                             <a href="mailto:info@dawatequran12.com" class="text-secondary">
                                 <span>info@dawatequran12.com</span>
                             </a>
-                            
+
                         </div>
                     </div>
                     <div class="col-lg-5 text-end">
                         <div class="h-100 d-inline-flex align-items-center">
                             <span class="text-body">Follow Us:</span>
-                            <a class="text-dark px-2" href="https://www.facebook.com/dawatquran12?mibextid=ZbWKwL"><i class="fab fa-facebook-f"></i></a>
-                            <a class="text-dark px-2" href="https://whatsapp.com/channel/0029VaDIzNcGpLHVIVTcWz2e"><i class="fab fa-whatsapp"></i></a>
-                            <a class="text-dark px-2" href="https://www.youtube.com/@dawatequranwithayesha"><i class="fab fa-youtube"></i></a>
-                            <a class="text-dark px-2" href="https://www.instagram.com/dawat_quran_12/profilecard/?igsh=bmNtOW4xOWlvY3Nj"><i class="fab fa-instagram"></i></a>
-                            
+                            <a class="text-dark px-2" href="https://www.facebook.com/dawatquran12?mibextid=ZbWKwL"><i
+                                    class="fab fa-facebook-f"></i></a>
+                            <a class="text-dark px-2" href="https://whatsapp.com/channel/0029VaDIzNcGpLHVIVTcWz2e"><i
+                                    class="fab fa-whatsapp"></i></a>
+                            <a class="text-dark px-2" href="https://www.youtube.com/@dawatequranwithayesha"><i
+                                    class="fab fa-youtube"></i></a>
+                            <a class="text-dark px-2"
+                                href="https://www.instagram.com/dawat_quran_12/profilecard/?igsh=bmNtOW4xOWlvY3Nj"><i
+                                    class="fab fa-instagram"></i></a>
+
                         </div>
                     </div>
                 </div>
@@ -108,19 +101,24 @@
                     <span class="fa fa-bars text-primary"></span>
                 </button>
                 <div class="collapse navbar-collapse bg-white" id="navbarCollapse">
-                    <div class="navbar-nav ms-lg-auto mx-xl-auto text-center">
-                        <a href="{{ route('home') }}" class="nav-item nav-link @if ($active == 'home') active @endif">Home</a>
-                        <a href="{{ route('about') }}" class="nav-item nav-link @if ($active == 'about') active @endif">About Us</a>
-                        <a href="{{ route('services') }}" class="nav-item nav-link @if ($active == 'services') active @endif">Services</a>
-                        <a href="{{ route('courses') }}" class="nav-item nav-link @if ($active == 'courses') active @endif">Courses</a>
-                        <a href="{{ route('instructors') }}" class="nav-item nav-link @if ($active == 'instructors') active @endif">Instructors</a>
-                        <a href="{{ route('contact.us') }}" class="nav-item nav-link @if ($active == 'contact') active @endif">Contact Us</a>
+                    <div class="navbar-nav ms-lg-auto mx-xl-auto">
+                        <a href="{{ route('home') }}"
+                            class="nav-item nav-link @if ($active == 'home') active @endif">Home</a>
+                        <a href="{{ route('about') }}"
+                            class="nav-item nav-link @if ($active == 'about') active @endif">About Us</a>
+                        <a href="{{ route('services') }}"
+                            class="nav-item nav-link @if ($active == 'services') active @endif">Services</a>
+                        <a href="{{ route('courses') }}"
+                            class="nav-item nav-link @if ($active == 'courses') active @endif">Courses</a>
+                        <a href="{{ route('instructors') }}"
+                            class="nav-item nav-link @if ($active == 'instructors') active @endif">Instructors</a>
+                        <a href="{{ route('contact.us') }}"
+                            class="nav-item nav-link @if ($active == 'contact') active @endif">Contact Us</a>
                     </div>
-                    <div class="text-center">
-                        <a href="{{ route('donate') }}" class="btn btn-primary py-2 px-3">Donate</a>
+                    <div class="d-flex ml-3 mb-3 mt-3 mt-lg-0">
+                        <a href="{{ route('donate') }}" class="btn btn-primary py-2 donate px-2">Donate</a>
                     </div>
                 </div>
-                
             </nav>
         </div>
 
@@ -199,7 +197,7 @@
                         </div>
                     </div>
                 </div>
-                
+
                 <div class="col-md-6 col-lg-6 col-xl-3">
                     <div class="footer-item mt-3">
                         <h4 class="text-light mb-4">Explore Link</h4>
@@ -251,7 +249,7 @@
     <script src="{{ asset('assets/user/lib/easing/easing.min.js') }}"></script>
     <script src="{{ asset('assets/user/lib/waypoints/waypoints.min.js') }}"></script>
     <script src="{{ asset('assets/user/lib/owlcarousel/owl.carousel.min.js') }}"></script>
-    
+
     <!-- Template Javascript -->
     <script src="{{ asset('assets/user/js/main.js') }}"></script>
     @yield('script')
