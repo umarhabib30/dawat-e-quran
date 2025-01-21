@@ -36,6 +36,24 @@
 
     @yield('style')
 
+    <style>
+        @media (max-width: 992px) {
+    .navbar-collapse {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .navbar-collapse .navbar-nav {
+        margin-bottom: 1rem;
+    }
+
+    .navbar-collapse .btn {
+        margin-top: 0.5rem;
+    }
+}
+
+    </style>
+
 </head>
 
 <body>
@@ -89,24 +107,19 @@
                     <span class="fa fa-bars text-primary"></span>
                 </button>
                 <div class="collapse navbar-collapse bg-white" id="navbarCollapse">
-                    <div class="navbar-nav ms-lg-auto mx-xl-auto">
-                        <a href="{{ route('home') }}"
-                            class="nav-item nav-link @if ($active == 'home') active @endif">Home</a>
-                        <a href="{{ route('about') }}"
-                            class="nav-item nav-link @if ($active == 'about') active @endif">About Us</a>
-                        <a href="{{ route('services') }}"
-                            class="nav-item nav-link @if ($active == 'services') active @endif">Services</a>
-                        <a href="{{ route('courses') }}"
-                            class="nav-item nav-link @if ($active == 'courses') active @endif">Courses</a>
-                        <a href="{{ route('instructors') }}"
-                            class="nav-item nav-link @if ($active == 'instructors') active @endif">Instructors</a>
-                        <a href="{{ route('contact.us') }}"
-                            class="nav-item nav-link @if ($active == 'contact') active @endif">Contact Us</a>
+                    <div class="navbar-nav ms-lg-auto mx-xl-auto text-center">
+                        <a href="{{ route('home') }}" class="nav-item nav-link @if ($active == 'home') active @endif">Home</a>
+                        <a href="{{ route('about') }}" class="nav-item nav-link @if ($active == 'about') active @endif">About Us</a>
+                        <a href="{{ route('services') }}" class="nav-item nav-link @if ($active == 'services') active @endif">Services</a>
+                        <a href="{{ route('courses') }}" class="nav-item nav-link @if ($active == 'courses') active @endif">Courses</a>
+                        <a href="{{ route('instructors') }}" class="nav-item nav-link @if ($active == 'instructors') active @endif">Instructors</a>
+                        <a href="{{ route('contact.us') }}" class="nav-item nav-link @if ($active == 'contact') active @endif">Contact Us</a>
                     </div>
-                    <div class="d-flex ml-3 mb-3 mt-3 mt-lg-0">
-                        <a href="{{ route('donate') }}" class="btn btn-primary py-2 px-2">Donate</a>
+                    <div class="text-center">
+                        <a href="{{ route('donate') }}" class="btn btn-primary py-2 px-3">Donate</a>
                     </div>
                 </div>
+                
             </nav>
         </div>
 
