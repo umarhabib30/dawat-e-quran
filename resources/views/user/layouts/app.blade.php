@@ -25,11 +25,15 @@
 
     <!-- Customized Bootstrap Stylesheet -->
     <link href="{{ asset('assets/user/css/bootstrap.min.css') }}" rel="stylesheet">
-    
+
 
     <!-- Template Stylesheet -->
     <link href="{{ asset('assets/user/css/style.css') }}" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/toastr@2.1.4/build/toastr.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/toastr@2.1.4/build/toastr.min.css" rel="stylesheet"> 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js"
+        integrity="sha512-AA1Bzp5Q0K1KanKKmvN/4d3IRKVlv9PYgwFPvm32nPO6QS8yH1HO7LbgB1pgiOxPtfeg5zEn2ba64MUcqJx6CA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
     @yield('style')
 
 </head>
@@ -52,22 +56,24 @@
                     <div class="col-lg-7 text-start">
                         <div class="h-100 d-inline-flex align-items-center me-4">
                             <span class="fa fa-phone-alt me-2 text-dark"></span>
-                            <a href="#" class="text-secondary"><span>+012 345 6789</span></a>
+                            <a href="https://wa.me/923011480664" class="text-secondary"><span>+92 301 1480664</span></a>
                         </div>
                         <div class="h-100 d-inline-flex align-items-center">
                             <span class="far fa-envelope me-2 text-dark"></span>
-                            <a href="#" class="text-secondary"><span>info@example.com</span></a>
+                            <a href="mailto:info@dawatequran12.com" class="text-secondary">
+                                <span>info@dawatequran12.com</span>
+                            </a>
+                            
                         </div>
                     </div>
                     <div class="col-lg-5 text-end">
                         <div class="h-100 d-inline-flex align-items-center">
                             <span class="text-body">Follow Us:</span>
-                            <a class="text-dark px-2" href=""><i class="fab fa-facebook-f"></i></a>
-                            <a class="text-dark px-2" href=""><i class="fab fa-twitter"></i></a>
-                            <a class="text-dark px-2" href=""><i class="fab fa-linkedin-in"></i></a>
-                            <a class="text-dark px-2" href=""><i class="fab fa-instagram"></i></a>
-                            <a class="text-body ps-4" href=""><i class="fa fa-lock text-dark me-1"></i>
-                                Signup/login</a>
+                            <a class="text-dark px-2" href="https://www.facebook.com/dawatquran12?mibextid=ZbWKwL"><i class="fab fa-facebook-f"></i></a>
+                            <a class="text-dark px-2" href="https://whatsapp.com/channel/0029VaDIzNcGpLHVIVTcWz2e"><i class="fab fa-whatsapp"></i></a>
+                            <a class="text-dark px-2" href="https://www.youtube.com/@dawatequranwithayesha"><i class="fab fa-youtube"></i></a>
+                            <a class="text-dark px-2" href="https://www.instagram.com/dawat_quran_12/profilecard/?igsh=bmNtOW4xOWlvY3Nj"><i class="fab fa-instagram"></i></a>
+                            
                         </div>
                     </div>
                 </div>
@@ -78,7 +84,8 @@
                 <a href="{{ route('home') }}" class="navbar-brand">
                     <img src="{{ asset('assets/user/logo/logo1.svg') }}" alt="" style="height: 50px">
                 </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarCollapse">
                     <span class="fa fa-bars text-primary"></span>
                 </button>
                 <div class="collapse navbar-collapse bg-white" id="navbarCollapse">
@@ -97,15 +104,14 @@
                             class="nav-item nav-link @if ($active == 'contact') active @endif">Contact Us</a>
                     </div>
                     <div class="d-flex ml-3 mb-3 mt-3 mt-lg-0">
-                        <a href="{{ route('donate') }}" 
-                           class="btn btn-primary py-2 px-2">Donate</a>
+                        <a href="{{ route('donate') }}" class="btn btn-primary py-2 px-2">Donate</a>
                     </div>
                 </div>
             </nav>
         </div>
-        
-        
-        
+
+
+
     </div>
     <!-- Topbar End -->
 
@@ -134,6 +140,7 @@
 
 
     @yield('content')
+    @include('sweetalert::alert')
 
 
     <!-- Footer Start -->
@@ -167,24 +174,35 @@
                     <div class="footer-item mt-3">
                         <h4 class="text-light mb-4">Our Mobile</h4>
                         <div class="d-flex flex-column">
-                            <div class="d-flex align-items-center  py-4">
-                                <span class="flex-shrink-0 btn-square bg-primary me-3 p-4"><i
-                                    class="fa fa-phone-alt text-dark"></i></span>
-                            <a href="" class="text-body">+92 301 1480664 <br> +92 311 1630343</a>
+                            <div class="d-flex align-items-center py-4">
+                                <span class="flex-shrink-0 btn-square bg-primary me-3 p-4">
+                                    <i class="fa fa-phone-alt text-dark"></i>
+                                </span>
+                                <a href="https://wa.me/923011480664" class="text-body" target="_blank">
+                                    +92 301 1480664 <br> +92 311 1630343
+                                </a>
                             </div>
-
                         </div>
                     </div>
                 </div>
+                
                 <div class="col-md-6 col-lg-6 col-xl-3">
                     <div class="footer-item mt-3">
                         <h4 class="text-light mb-4">Explore Link</h4>
                         <div class="h-100 d-inline-flex align-items-center mt-4" bis_skin_checked="1">
                             <span class="text-body ">Follow Us:</span>
-                            <a target="__blank" class=" px-2" href="https://www.facebook.com/dawatquran12?mibextid=ZbWKwL"><i class="fab fa-facebook-f"></i></a>
-                            <a target="__blank" class=" px-2" href="https://youtube.com/@dawatequranwithayesha?si=h-dPBPXPCGj_knpl"><i class="fab fa-youtube"></i></a>
-                            <a target="__blank" class=" px-2" href="https://whatsapp.com/channel/0029VaDIzNcGpLHVIVTcWz2e"><i class="fab fa-whatsapp"></i></a>
-                            <a target="__blank" class=" px-2" href="https://www.instagram.com/dawat_quran_12/profilecard/?igsh=bmNtOW4xOWlvY3Nj"><i class="fab fa-instagram"></i></a>
+                            <a target="__blank" class=" px-2"
+                                href="https://www.facebook.com/dawatquran12?mibextid=ZbWKwL"><i
+                                    class="fab fa-facebook-f"></i></a>
+                            <a target="__blank" class=" px-2"
+                                href="https://youtube.com/@dawatequranwithayesha?si=h-dPBPXPCGj_knpl"><i
+                                    class="fab fa-youtube"></i></a>
+                            <a target="__blank" class=" px-2"
+                                href="https://whatsapp.com/channel/0029VaDIzNcGpLHVIVTcWz2e"><i
+                                    class="fab fa-whatsapp"></i></a>
+                            <a target="__blank" class=" px-2"
+                                href="https://www.instagram.com/dawat_quran_12/profilecard/?igsh=bmNtOW4xOWlvY3Nj"><i
+                                    class="fab fa-instagram"></i></a>
                         </div>
                     </div>
                 </div>
@@ -219,8 +237,7 @@
     <script src="{{ asset('assets/user/lib/easing/easing.min.js') }}"></script>
     <script src="{{ asset('assets/user/lib/waypoints/waypoints.min.js') }}"></script>
     <script src="{{ asset('assets/user/lib/owlcarousel/owl.carousel.min.js') }}"></script>
-    <script src="https://cdn.jsdelivr.net/npm/toastr@2.1.4/build/toastr.min.js"></script>
-
+    
     <!-- Template Javascript -->
     <script src="{{ asset('assets/user/js/main.js') }}"></script>
     @yield('script')

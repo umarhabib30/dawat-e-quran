@@ -3,6 +3,9 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use App\Models\Category;
+use App\Models\Course;
+use App\Models\Instructor;
 use Illuminate\Http\Request;
 
 class AdminDashboardController extends Controller
@@ -12,13 +15,22 @@ class AdminDashboardController extends Controller
      */
     public function index()
     {
+
+        $instructor = Instructor::count();
+        $course = Course::count();
+        $category = Category::count();
+
+
         $data = [
             'active' => 'dashboard',
             'title' => 'Admin Dashboard',
+            'instructor' => $instructor,
+            'course' => $course,
+            'category' => $category,
         ];
-
         return view('admin.dashboard.index', $data);
     }
+
 
     /**
      * Show the form for creating a new resource.

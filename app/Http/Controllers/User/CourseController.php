@@ -51,7 +51,7 @@ class CourseController extends Controller
         if ($keyword) {
             $query->where(function ($q) use ($keyword) {
                 $q->where('title', 'like', '%' . $keyword . '%')
-                    ->orWhere('author', 'like', '%' . $keyword . '%');
+                    ->orWhere('auther', 'like', '%' . $keyword . '%');
             });
         }
 
@@ -72,5 +72,4 @@ class CourseController extends Controller
             'courses' => view('user.course.partial', compact('courses'))->render(),
         ]);
     }
-
 }

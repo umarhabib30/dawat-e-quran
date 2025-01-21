@@ -1,4 +1,5 @@
 @extends('user.layouts.app')
+
 @section('content')
 <div class="container d-flex justify-content-center align-items-center py-4">
     <div class="card shadow-lg border-warning" style="width: 100%; max-width: 600px; border-radius: 15px;">
@@ -26,7 +27,7 @@
             <div class="text-center mb-4">
                 <div class="mb-2 d-flex justify-content-center align-items-center">
                     <span class="text-brown fw-bold">Meezan Bank</span>
-                    <div class="text-dark ms-2" id="bankAccount"> 14060104471355</div>
+                    <div class="text-dark ms-2" id="bankAccount">14060104471355</div>
                     <button class="btn btn-light ms-2" onclick="copyToClipboard('bankAccount')">
                         <i class="fas fa-copy" style="font-size: 18px;"></i>
                     </button>
@@ -54,6 +55,7 @@
 @endsection
 
 @section('style')
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css" rel="stylesheet"> <!-- Toastr CSS -->
     <style>
         .svg-logo {
             height: 35px;
@@ -120,6 +122,7 @@
 
 @section('script')
     <script src="https://kit.fontawesome.com/a076d05399.js"></script> <!-- FontAwesome Script -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script> <!-- Toastr Script -->
     <script>
         function copyToClipboard(elementId) {
             var textToCopy = document.getElementById(elementId).textContent;
@@ -129,7 +132,17 @@
             textArea.select();
             document.execCommand("copy");
             document.body.removeChild(textArea);
+            
+            // Show toastr notification
             toastr.success('Copied to clipboard!');
         }
+
+        // Toastr options
+        toastr.options = {
+            "closeButton": true,
+            "progressBar": true,
+            "timeOut": "2000",
+            "positionClass": "toast-top-right"  // Change position to top-right
+        };
     </script>
 @endsection

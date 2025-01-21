@@ -5,6 +5,7 @@ namespace App\Http\Controllers\User;
 use App\Http\Controllers\Controller;
 use App\Models\ContacUs;
 use Illuminate\Http\Request;
+use RealRashid\SweetAlert\Facades\Alert;
 
 class ContactUsController extends Controller
 {
@@ -20,7 +21,6 @@ class ContactUsController extends Controller
 
     public function store(Request $request)
     {
-
         $contact = ContacUs::create([
             'name' => $request->name,
             'email' => $request->email,
@@ -28,7 +28,12 @@ class ContactUsController extends Controller
             'message' => $request->message,
         ]);
 
-        toastr()->success('success','Your message send to Admin!😊');
-        return redirect()->back();
+        if ($contact) {
+            Alert::success('Success Title', 'Success Message');
+            return redirect()->back();
+        } else {
+           Alert::success('Success Title', 'Success Message');
+            return redirect()->back();
+        }
     }
 }
